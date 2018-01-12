@@ -1,22 +1,11 @@
-def reverse(l):
-    if len(l) > 1:
-        print(l[len(l)-1])
-        del l[len(l)-1]
-        return reverse(l)
-    else:
-        return l[0]
+import sys
 
 
-def ss(n):
-    if n != 0:
-        l.append(n)
-        return ss(int(input()))
-    elif n == 0 and len(l) == 0:
-        return n
-    elif n == 0 and len(l) != 0:
-        l.append(n)
-        return reverse(l)
+def print_reversed(seq, pos=0):
+    elem = seq[pos]
+    if elem != 0:
+        print_reversed(seq, pos + 1)
+    print(elem)
 
 
-l = []
-print(ss(int(input())))
+print_reversed(tuple(map(int, sys.stdin.read().split())))
