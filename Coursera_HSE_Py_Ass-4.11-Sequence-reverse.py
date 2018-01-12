@@ -1,6 +1,3 @@
-import sys
-
-
 def print_reversed(seq, pos=0):
     elem = seq[pos]
     if elem != 0:
@@ -8,4 +5,4 @@ def print_reversed(seq, pos=0):
     print(elem)
 
 
-print_reversed(tuple(map(int, sys.stdin.read().split())))
+print_reversed(tuple(map(int, input().split())))
