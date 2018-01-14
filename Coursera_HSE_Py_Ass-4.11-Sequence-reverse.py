@@ -1,8 +1,9 @@
-def print_reversed(seq, pos=0):
-    elem = seq[pos]
-    if elem != 0:
-        print_reversed(seq, pos + 1)
-    print(elem)
+def reverse(n):
+    if n != 0:
+        reverse(int(input()))
+        print(n)
+    else:
+        print(n)
 
 
-print_reversed(tuple(map(int, input().split())))
+reverse(int(input()))
